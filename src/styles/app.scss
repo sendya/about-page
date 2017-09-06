@@ -1,0 +1,139 @@
+$base-color: #fff;
+$mobile-mode-size: 800px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+section {
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "Droid Sans Fallback", "Source Sans", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", sans-serif
+}
+
+body {
+  background: $base-color;
+}
+
+.main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 300px;
+  margin-left: -300px;
+  margin-top: -200px;
+  transition: all .5s;
+  animation: move-a-eff 1s;
+
+  .avatar {
+    position: absolute;
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -128px;
+    padding: 3px;
+    border: solid 2px #000;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .content {
+    position: absolute;
+    color: $base-color;
+    top: 30px;
+    margin-left: 290px;
+    height: 260px;
+    width: 340px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+
+    .name {
+      font-size: 2em;
+
+      .lv {
+        color: $base-color;
+        font-size: .8em;
+      }
+    }
+
+    .desc {
+      font-size: 1.2em;
+    }
+
+  }
+
+  a {
+    color: $base-color;
+  }
+}
+
+@media screen and (max-width: $mobile-mode-size) {
+
+  body {
+    overflow: hidden;
+  }
+
+  .main {
+    width: 100%;
+    height: 600px;
+    top: 20%;
+    left: 0;
+    margin-top: -80px;
+    margin-left: 0;
+    transition: all .5s;
+    animation: move-a-eff 1s;
+
+    .avatar {
+      width: 256px;
+      height: 256px;
+      top: 0;
+      left: 50%;
+      margin-left: -128px;
+      margin-top: 0;
+      border-radius: 50%;
+      padding: 3px;
+      border: solid 2px #000;
+    }
+
+    .content {
+      position: absolute;
+      text-align: center;
+      color: $base-color;
+      top: 300px;
+      left: 0;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+/**
+ * effects
+ */
+@keyframes move-a-eff {
+  from {
+    top: 70%;
+    opacity: .1
+  }
+  to {
+    top: 50%;
+    opacity: 1
+  }
+}
+
+@keyframes move-b-eff {
+  from {
+    top: 40%;
+    opacity: .1
+  }
+  to {
+    top: 20%;
+    opacity: 1
+  }
+}
