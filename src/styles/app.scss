@@ -15,7 +15,8 @@ section {
 }
 
 body {
-  background: $base-color;
+  background: linear-gradient(0deg, rgba(189, 189, 189, 0.08) 50%, transparent 50%), linear-gradient(90deg, rgba(228, 228, 228, 0.15) 50%, transparent 50%);
+  background-size: 30px 30px;
 }
 
 .main {
@@ -37,10 +38,12 @@ body {
     top: 50%;
     margin-top: -128px;
     padding: 3px;
-    border: solid 2px #000;
+    border: solid 2px #e5e5e5;
 
     img {
       border-radius: 50%;
+      width: 256px;
+      height: 256px;
     }
   }
 
@@ -87,7 +90,7 @@ body {
     margin-top: -80px;
     margin-left: 0;
     transition: all .5s;
-    animation: move-a-eff 1s;
+    animation: move-b-eff 1s;
 
     .avatar {
       width: 256px;
@@ -98,7 +101,7 @@ body {
       margin-top: 0;
       border-radius: 50%;
       padding: 3px;
-      border: solid 2px #000;
+      border: solid 2px #e5e5e5;
     }
 
     .content {
